@@ -1,0 +1,22 @@
+{
+    "sourceFile": "vite-project/src/App.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1699388593650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699388741492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,22 +3,20 @@\n     flex-direction: column;\n     align-items: center;\n     justify-content: center;\n     min-height: 100vh;\n-  }\n-  \n-  .counter {\n+}\n+\n+.counter {\n     font-weight: bold;\n     width: 100%;\n     text-align: center;\n-  }\n-  \n-  .grid {\n+}\n+\n+.grid {\n     display: grid;\n     grid-template-columns: 1fr 1fr;\n     grid-template-rows: 1fr 1fr;\n     gap: 0;\n     max-width: 200px;\n     text-align: center;\n-  }\n-  \n-\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1699388593650,
+            "name": "Commit-0",
+            "content": ".app {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    min-height: 100vh;\n  }\n  \n  .counter {\n    font-weight: bold;\n    width: 100%;\n    text-align: center;\n  }\n  \n  .grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr 1fr;\n    gap: 0;\n    max-width: 200px;\n    text-align: center;\n  }\n  \n\n"
+        }
+    ]
+}

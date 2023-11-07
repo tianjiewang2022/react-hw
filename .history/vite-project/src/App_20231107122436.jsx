@@ -4,12 +4,30 @@ import { GridProvider } from './Grid';
 import Counter from './Counter'
 import './App.css';
 
+const appStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: '100vh',
+};
+const gridStyle = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gridTemplateRows: '1fr 1fr',
+  maxWidth: '200px',
+  textAlign: 'center',
+};
+const boldTextStyle = {
+  fontWeight: 'bold',
+};
+
 function App() {
   return (
     <GridProvider>
-      <div className="app">
-        <div className="counter">Counts: <Counter /></div>
-        <div className="grid">
+      <div style={appStyle}>
+        <div className="counter" style={boldTextStyle}>Counts: <Counter /></div>
+        <div className="grid" style={gridStyle}>
           {/* {Array.from({ length: 2 }, (_, row) => ( */}
           {/* <div key={row} className="row">
               {Array.from({ length: 2 }, (_, col) => (

@@ -4,6 +4,24 @@ import { GridProvider } from './Grid';
 import Counter from './Counter'
 import './App.css';
 
+const appStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: '100vh',
+};
+const gridStyle = {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gridTemplateRows: '1fr 1fr',
+  maxWidth: '200px',
+  textAlign: 'center',
+};
+const boldTextStyle = {
+  fontWeight: 'bold',
+};
+
 function App() {
   return (
     <GridProvider>
