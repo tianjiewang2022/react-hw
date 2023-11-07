@@ -3,10 +3,18 @@ import Cell from './Cell';
 import { GridProvider } from './Grid';
 import Counter from './Counter'
 
+const appStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: '100vh',
+};
+
 function App() {
   return (
     <GridProvider>
-      <div>
+      <div style={appStyle}>
         <div className="counter">Counts: <Counter /></div>
         <div className="grid">
           {Array.from({ length: 2 }, (_, row) => (
