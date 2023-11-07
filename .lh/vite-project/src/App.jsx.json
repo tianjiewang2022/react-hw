@@ -1,0 +1,38 @@
+{
+    "sourceFile": "vite-project/src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1699387192924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699387277960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,15 +9,23 @@\n   alignItems: 'center',\n   justifyContent: 'center',\n   height: '100vh',\n };\n+const gridStyle = {\n+  display: 'grid',\n+  gridTemplateColumns: '1fr 1fr',\n+  gridTemplateRows: '1fr 1fr',\n+  gap: '5px',\n+  maxWidth: '200px',\n+  textAlign: 'center',\n+};\n \n function App() {\n   return (\n     <GridProvider>\n       <div style={appStyle}>\n         <div className=\"counter\">Counts: <Counter /></div>\n-        <div className=\"grid\">\n+        <div className=\"grid\" style={gridStyle}>\n           {Array.from({ length: 2 }, (_, row) => (\n             <div key={row} className=\"row\">\n               {Array.from({ length: 2 }, (_, col) => (\n                 <Cell key={col} row={row} col={col} />\n"
+                },
+                {
+                    "date": 1699387372617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,14 +24,17 @@\n     <GridProvider>\n       <div style={appStyle}>\n         <div className=\"counter\">Counts: <Counter /></div>\n         <div className=\"grid\" style={gridStyle}>\n-          {Array.from({ length: 2 }, (_, row) => (\n-            <div key={row} className=\"row\">\n+          {/* {Array.from({ length: 2 }, (_, row) => ( */}\n+            {/* <div key={row} className=\"row\">\n               {Array.from({ length: 2 }, (_, col) => (\n                 <Cell key={col} row={row} col={col} />\n               ))}\n-            </div>\n+            </div> */}\n+          {/* ))} */}\n+          {Array.from({ length: 4 }, (_, index) => (\n+            <Cell key={index} row={Math.floor(index / 2)} col={index % 2} />\n           ))}\n         </div>\n       </div>\n     </GridProvider>\n"
+                },
+                {
+                    "date": 1699387554761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n const gridStyle = {\n   display: 'grid',\n   gridTemplateColumns: '1fr 1fr',\n   gridTemplateRows: '1fr 1fr',\n-  gap: '5px',\n+  gap: '0',\n   maxWidth: '200px',\n   textAlign: 'center',\n };\n \n"
+                },
+                {
+                    "date": 1699387599588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,14 +17,17 @@\n   gap: '0',\n   maxWidth: '200px',\n   textAlign: 'center',\n };\n+const boldTextStyle = {\n+  fontWeight: 'bold',\n+};\n \n function App() {\n   return (\n     <GridProvider>\n       <div style={appStyle}>\n-        <div className=\"counter\">Counts: <Counter /></div>\n+        <div className=\"counter\" style={boldTextStyle}>Counts: <Counter /></div>\n         <div className=\"grid\" style={gridStyle}>\n           {/* {Array.from({ length: 2 }, (_, row) => ( */}\n           {/* <div key={row} className=\"row\">\n               {Array.from({ length: 2 }, (_, col) => (\n"
+                },
+                {
+                    "date": 1699387716054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,14 +20,19 @@\n };\n const boldTextStyle = {\n   fontWeight: 'bold',\n };\n-\n+const gridContainerStyle = {\n+  display: 'flex',\n+  flexDirection: 'column',\n+  alignItems: 'center',\n+};\n function App() {\n   return (\n     <GridProvider>\n       <div style={appStyle}>\n         <div className=\"counter\" style={boldTextStyle}>Counts: <Counter /></div>\n+        <div className=\"grid-container\" style={gridContainerStyle}>\n         <div className=\"grid\" style={gridStyle}>\n           {/* {Array.from({ length: 2 }, (_, row) => ( */}\n           {/* <div key={row} className=\"row\">\n               {Array.from({ length: 2 }, (_, col) => (\n@@ -38,8 +43,9 @@\n           {Array.from({ length: 4 }, (_, index) => (\n             <Cell key={index} row={Math.floor(index / 2)} col={index % 2} />\n           ))}\n         </div>\n+        </div>\n       </div>\n     </GridProvider>\n   );\n }\n"
+                }
+            ],
+            "date": 1699387192924,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport Cell from './Cell';\nimport { GridProvider } from './Grid';\nimport Counter from './Counter'\n\nconst appStyle = {\n  display: 'flex',\n  flexDirection: 'column',\n  alignItems: 'center',\n  justifyContent: 'center',\n  height: '100vh',\n};\n\nfunction App() {\n  return (\n    <GridProvider>\n      <div style={appStyle}>\n        <div className=\"counter\">Counts: <Counter /></div>\n        <div className=\"grid\">\n          {Array.from({ length: 2 }, (_, row) => (\n            <div key={row} className=\"row\">\n              {Array.from({ length: 2 }, (_, col) => (\n                <Cell key={col} row={row} col={col} />\n              ))}\n            </div>\n          ))}\n        </div>\n      </div>\n    </GridProvider>\n  );\n}\nexport default App;"
+        }
+    ]
+}

@@ -14,17 +14,14 @@ const gridStyle = {
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   gridTemplateRows: '1fr 1fr',
+  gap: '0',
   maxWidth: '200px',
   textAlign: 'center',
 };
 const boldTextStyle = {
   fontWeight: 'bold',
 };
-const gridContainerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
+
 function App() {
   return (
     <GridProvider>
