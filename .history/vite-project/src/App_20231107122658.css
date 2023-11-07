@@ -10,6 +10,8 @@
     font-weight: bold;
     width: 100%;
     text-align: center;
+    padding-bottom: 20px;
+    /* Add padding to create space between the header and grid */
 }
 
 .grid {
