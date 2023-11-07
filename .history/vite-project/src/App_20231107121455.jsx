@@ -5,7 +5,7 @@ import Counter from './Counter'
 
 const appStyle = {
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
   minHeight: '100vh',

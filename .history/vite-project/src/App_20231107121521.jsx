@@ -23,8 +23,8 @@ const boldTextStyle = {
 
 function App() {
   return (
-    <GridProvider>
-      <div style={appStyle}>
+    <GridProvider style={appStyle}>
+      <div>
         <div className="counter" style={boldTextStyle}>Counts: <Counter /></div>
         <div className="grid" style={gridStyle}>
           {/* {Array.from({ length: 2 }, (_, row) => ( */}

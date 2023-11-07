@@ -19,6 +19,7 @@ const gridStyle = {
 };
 const boldTextStyle = {
   fontWeight: 'bold',
+  width: '100%'
 };
 
 function App() {

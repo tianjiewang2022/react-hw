@@ -25,7 +25,7 @@ function App() {
   return (
     <GridProvider>
       <div style={appStyle}>
-        <div className="counter" style={boldTextStyle}>Counts: <Counter /></div>
+        <div className="counter" style={{ ...boldTextStyle, width: '100%' }}>Counts: <Counter /></div>
         <div className="grid" style={gridStyle}>
           {/* {Array.from({ length: 2 }, (_, row) => ( */}
           {/* <div key={row} className="row">

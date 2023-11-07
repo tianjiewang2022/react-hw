@@ -8,7 +8,7 @@ const appStyle = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  minHeight: '100vh',
+  height: '100vh',
 };
 const gridStyle = {
   display: 'grid',
