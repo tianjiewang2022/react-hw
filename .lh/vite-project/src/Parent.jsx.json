@@ -1,0 +1,26 @@
+{
+    "sourceFile": "vite-project/src/Parent.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1699332611969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699332623509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState } from 'react'\n \n-import './App.css'\n+import './Parent.css'\n \n function Parent() {\n   const [count, setCount] = useState(0)\n   return (\n"
+                },
+                {
+                    "date": 1699332689938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import { useState } from 'react'\n+\n+import './Parent.css'\n+\n+function Parent() {\n+  const [count, setCount] = useState(0)\n+  return (\n+    <div className=\"card\">\n+      Count: <button onClick={() => setCount((count) => count + 1)}> {count} </button>\n+    </div>\n+\n+\n+  )\n+}\n+\n+export default Parent\n"
+                }
+            ],
+            "date": 1699332611969,
+            "name": "Commit-0",
+            "content": "import { useState } from 'react'\n\nimport './App.css'\n\nfunction Parent() {\n  const [count, setCount] = useState(0)\n  return (\n    <div className=\"card\">\n      Count: <button onClick={() => setCount((count) => count + 1)}> {count} </button>\n    </div>\n\n\n  )\n}\n\nexport default Parent\n"
+        }
+    ]
+}

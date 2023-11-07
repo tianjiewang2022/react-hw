@@ -1,0 +1,62 @@
+{
+    "sourceFile": "vite-project/src/Grid.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1699334301499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699334332195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-import React, { createContext, useContext, useState } from 'react';\n+import { createContext, useContext, useState } from 'react';\n import Cell from './Cell';\n const AppContext = createContext();\n \n-export function useAppContext() {\n+export function useGridContext() {\n     return useContext(AppContext);\n }\n \n function Grid() {\n"
+                },
+                {
+                    "date": 1699334342543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createContext, useContext, useState } from 'react';\n import Cell from './Cell';\n-const AppContext = createContext();\n+const GridContext = createContext();\n \n export function useGridContext() {\n     return useContext(AppContext);\n }\n"
+                },
+                {
+                    "date": 1699334350763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import Cell from './Cell';\n const GridContext = createContext();\n \n export function useGridContext() {\n-    return useContext(AppContext);\n+    return useContext(GridContext);\n }\n \n function Grid() {\n     const [grid, setGrid] = useState([\n"
+                },
+                {
+                    "date": 1699335701497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,19 +25,22 @@\n     return (\n         <div>\n             <div className=\"counter\">Counts: {countOnCells()}</div>\n             <div className=\"grid\">\n-                {grid.map((row, rowIndex) => (\n+            <AppContext.Provider value={{ grid, toggleCell, countOnCells }}>\n+            {children}\n+        </AppContext.Provider>\n+                {/* {grid.map((row, rowIndex) => (\n                     <div key={rowIndex} className=\"row\">\n                         {row.map((isOn, colIndex) => (\n                             <Cell\n                                 key={colIndex}\n                                 isOn={isOn}\n                                 toggleCell={() => toggleCell(rowIndex, colIndex)}\n                             />\n-                        ))}\n-                    </div>\n-                ))}\n+                        ))} */}\n+                    {/* </div> */}\n+                {/* ))} */}\n             </div>\n         </div>\n     );\n }\n"
+                },
+                {
+                    "date": 1699335735699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export function useGridContext() {\n     return useContext(GridContext);\n }\n \n-function Grid() {\n+function Grid({ children }) {\n     const [grid, setGrid] = useState([\n         [false, false],\n         [false, false],\n     ]);\n@@ -25,11 +25,11 @@\n     return (\n         <div>\n             <div className=\"counter\">Counts: {countOnCells()}</div>\n             <div className=\"grid\">\n-            <AppContext.Provider value={{ grid, toggleCell, countOnCells }}>\n-            {children}\n-        </AppContext.Provider>\n+                <GridContext.Provider value={{ grid, toggleCell, countOnCells }}>\n+                    {children}\n+                </GridContext.Provider>\n                 {/* {grid.map((row, rowIndex) => (\n                     <div key={rowIndex} className=\"row\">\n                         {row.map((isOn, colIndex) => (\n                             <Cell\n@@ -37,9 +37,9 @@\n                                 isOn={isOn}\n                                 toggleCell={() => toggleCell(rowIndex, colIndex)}\n                             />\n                         ))} */}\n-                    {/* </div> */}\n+                {/* </div> */}\n                 {/* ))} */}\n             </div>\n         </div>\n     );\n"
+                },
+                {
+                    "date": 1699335918619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export function useGridContext() {\n     return useContext(GridContext);\n }\n \n-function Grid({ children }) {\n+function GridProvider({ children }) {\n     const [grid, setGrid] = useState([\n         [false, false],\n         [false, false],\n     ]);\n@@ -44,5 +44,5 @@\n         </div>\n     );\n }\n \n-export default Grid;\n+export default GridProvider;\n"
+                },
+                {
+                    "date": 1699335932185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createContext, useContext, useState } from 'react';\n-import Cell from './Cell';\n+// import Cell from './Cell';\n const GridContext = createContext();\n \n export function useGridContext() {\n     return useContext(GridContext);\n"
+                },
+                {
+                    "date": 1699337865214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export function useGridContext() {\n     return useContext(GridContext);\n }\n \n-function GridProvider({ children }) {\n+export function GridProvider({ children }) {\n     const [grid, setGrid] = useState([\n         [false, false],\n         [false, false],\n     ]);\n@@ -43,6 +43,4 @@\n             </div>\n         </div>\n     );\n }\n-\n-export default GridProvider;\n"
+                },
+                {
+                    "date": 1699337924369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n \n     return (\n         <div>\n             <div className=\"counter\">Counts: {countOnCells()}</div>\n-            <div className=\"grid\">\n+            {/* <div className=\"grid\"> */}\n                 <GridContext.Provider value={{ grid, toggleCell, countOnCells }}>\n                     {children}\n                 </GridContext.Provider>\n                 {/* {grid.map((row, rowIndex) => (\n@@ -39,8 +39,8 @@\n                             />\n                         ))} */}\n                 {/* </div> */}\n                 {/* ))} */}\n-            </div>\n+            {/* </div> */}\n         </div>\n     );\n }\n"
+                },
+                {
+                    "date": 1699338680892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n     };\n \n     return (\n         <div>\n-            <div className=\"counter\">Counts: {countOnCells()}</div>\n+            {/* <div className=\"counter\">Counts: {countOnCells()}</div> */}\n             {/* <div className=\"grid\"> */}\n             <GridContext.Provider value={{ grid, toggleCell, countOnCells }}>\n                 {children}\n             </GridContext.Provider>\n"
+                },
+                {
+                    "date": 1699339483891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,24 +23,12 @@\n     };\n \n     return (\n         <div>\n-            {/* <div className=\"counter\">Counts: {countOnCells()}</div> */}\n-            {/* <div className=\"grid\"> */}\n+            \n             <GridContext.Provider value={{ grid, toggleCell, countOnCells }}>\n                 {children}\n             </GridContext.Provider>\n-            {/* {grid.map((row, rowIndex) => (\n-                    <div key={rowIndex} className=\"row\">\n-                        {row.map((isOn, colIndex) => (\n-                            <Cell\n-                                key={colIndex}\n-                                isOn={isOn}\n-                                toggleCell={() => toggleCell(rowIndex, colIndex)}\n-                            />\n-                        ))} */}\n-            {/* </div> */}\n-            {/* ))} */}\n-            {/* </div> */}\n+            \n         </div>\n     );\n }\n"
+                }
+            ],
+            "date": 1699334301499,
+            "name": "Commit-0",
+            "content": "import React, { createContext, useContext, useState } from 'react';\nimport Cell from './Cell';\nconst AppContext = createContext();\n\nexport function useAppContext() {\n    return useContext(AppContext);\n}\n\nfunction Grid() {\n    const [grid, setGrid] = useState([\n        [false, false],\n        [false, false],\n    ]);\n\n    const toggleCell = (row, col) => {\n        const newGrid = [...grid];\n        newGrid[row][col] = !newGrid[row][col];\n        setGrid(newGrid);\n    };\n\n    const countOnCells = () => {\n        return grid.flat().filter((cell) => cell).length;\n    };\n\n    return (\n        <div>\n            <div className=\"counter\">Counts: {countOnCells()}</div>\n            <div className=\"grid\">\n                {grid.map((row, rowIndex) => (\n                    <div key={rowIndex} className=\"row\">\n                        {row.map((isOn, colIndex) => (\n                            <Cell\n                                key={colIndex}\n                                isOn={isOn}\n                                toggleCell={() => toggleCell(rowIndex, colIndex)}\n                            />\n                        ))}\n                    </div>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default Grid;\n"
+        }
+    ]
+}

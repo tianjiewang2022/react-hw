@@ -1,0 +1,50 @@
+{
+    "sourceFile": "vite-project/src/Counter.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1699338558825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699338569714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n // Counter.jsx\n import React from 'react';\n-import { useGridContext } from './GridContext';\n+import { useGridContext } from './App';\n \n function Counter() {\n     const { countOnCells } = useGridContext();\n \n"
+                },
+                {
+                    "date": 1699338657428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+// Counter.jsx\n+import React from 'react';\n+import { useGridContext } from './Grid';\n+\n+function Counter() {\n+    const { countOnCells } = useGridContext();\n+\n+    return <span>{countOnCells()}</span>;\n+}\n+\n+export default Counter;\n"
+                },
+                {
+                    "date": 1699339531230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,8 @@\n import { useGridContext } from './Grid';\n \n function Counter() {\n     const { countOnCells } = useGridContext();\n-\n     return <span>{countOnCells()}</span>;\n }\n \n export default Counter;\n-// Counter.jsx\n-import React from 'react';\n-import { useGridContext } from './App';\n-\n-function Counter() {\n-    const { countOnCells } = useGridContext();\n-\n-    return <span>{countOnCells()}</span>;\n-}\n-\n-export default Counter;\n"
+                },
+                {
+                    "date": 1699381555311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-// Counter.jsx\n-import React from 'react';\n+\n import { useGridContext } from './Grid';\n \n function Counter() {\n     const { countOnCells } = useGridContext();\n"
+                },
+                {
+                    "date": 1699382660785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\n import { useGridContext } from './Grid';\n \n function Counter() {\n     const { countOnCells } = useGridContext();\n"
+                },
+                {
+                    "date": 1699383374974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import React from 'react';\n+import { useGridContext } from './Grid';\n+\n+function Counter() {\n+    const { countOnCells } = useGridContext();\n+    return <span>{countOnCells()}</span>;\n+}\n+\n+export default Counter;\n"
+                },
+                {
+                    "date": 1699383388410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,9 @@\n import React from 'react';\n import { useGridContext } from './Grid';\n \n-function Counter() {\n+export function Counter() {\n     const { countOnCells } = useGridContext();\n     return <span>{countOnCells()}</span>;\n }\n \n-export default Counter;\n-import { useGridContext } from './Grid';\n \n-function Counter() {\n-    const { countOnCells } = useGridContext();\n-    return <span>{countOnCells()}</span>;\n-}\n-\n-export default Counter;\n"
+                },
+                {
+                    "date": 1699384391127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import React from 'react';\n import { useGridContext } from './Grid';\n \n-export function Counter() {\n+function Counter() {\n     const { countOnCells } = useGridContext();\n     return <span>{countOnCells()}</span>;\n }\n \n+export default Counter;\n \n"
+                }
+            ],
+            "date": 1699338558825,
+            "name": "Commit-0",
+            "content": "// Counter.jsx\nimport React from 'react';\nimport { useGridContext } from './GridContext';\n\nfunction Counter() {\n    const { countOnCells } = useGridContext();\n\n    return <span>{countOnCells()}</span>;\n}\n\nexport default Counter;\n"
+        }
+    ]
+}

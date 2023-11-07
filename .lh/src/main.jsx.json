@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1699331270642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699331510043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n \n ReactDOM.createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n     <CountProvider>\n-      <RouterProvider router={router} />\n+      <Info />\n+      {/* <RouterProvider router={router} />\n       {/* <App /> same as calling App() */}\n-    </CountProvider>\n+    {/* </CountProvider> */} \n   </React.StrictMode>,\n )\n"
+                },
+                {
+                    "date": 1699331533385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,10 +20,10 @@\n \n ReactDOM.createRoot(document.getElementById('root')).render(\n   <React.StrictMode>\n     <CountProvider>\n-      <Info />\n-      {/* <RouterProvider router={router} />\n+      <RouterProvider router={router} />\n       {/* <App /> same as calling App() */}\n-      {/* </CountProvider> */}\n+    </CountProvider>\n+\n   </React.StrictMode>,\n )\n"
+                }
+            ],
+            "date": 1699331270641,
+            "name": "Commit-0",
+            "content": "import React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App.jsx'\nimport CountProvider from './CountProvider.jsx'\nimport { Link, RouterProvider, createBrowserRouter } from 'react-router-dom'\nimport Info from './Info.jsx'\n// import './index.css'\n\nconst router = createBrowserRouter([\n  {\n    path: '/',\n    element: <App />\n  },\n  {\n    path: '/info',\n    element: <Info />\n  }\n\n])\n\nReactDOM.createRoot(document.getElementById('root')).render(\n  <React.StrictMode>\n    <CountProvider>\n      <RouterProvider router={router} />\n      {/* <App /> same as calling App() */}\n    </CountProvider>\n  </React.StrictMode>,\n)\n"
+        }
+    ]
+}

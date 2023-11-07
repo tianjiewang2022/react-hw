@@ -1,0 +1,46 @@
+{
+    "sourceFile": "vite-project/src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1699331938333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1699331944021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         </a>\n       </div> */}\n       {/* <h1>Vite + React</h1> */}\n       <div className=\"card\">\n-        Count: <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>\n+        Count: <button onClick={() => setCount((count) => count + 1)}> count is {count} </button>\n         <p>\n           Edit <code>src/App.jsx</code> and save to test HMR\n         </p>\n       </div>\n"
+                },
+                {
+                    "date": 1699332263434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState } from 'react'\n-import reactLogo from './assets/react.svg'\n-import viteLogo from '/vite.svg'\n+// import reactLogo from './assets/react.svg'\n+// import viteLogo from '/vite.svg'\n import './App.css'\n \n function App() {\n   const [count, setCount] = useState(0)\n"
+                },
+                {
+                    "date": 1699332379740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import { useState } from 'react'\n+// import reactLogo from './assets/react.svg'\n+// import viteLogo from '/vite.svg'\n+import './App.css'\n+\n+function App() {\n+  const [count, setCount] = useState(0)\n+\n+  return (\n+    <>\n+      <div>\n+        <a href=\"https://vitejs.dev\" target=\"_blank\">\n+          <img src={viteLogo} className=\"logo\" alt=\"Vite logo\" />\n+        </a>\n+        <a href=\"https://react.dev\" target=\"_blank\">\n+          <img src={reactLogo} className=\"logo react\" alt=\"React logo\" />\n+        </a>\n+      </div>\n+      <h1>Vite + React</h1>\n+      <div className=\"card\">\n+        Count: <button onClick={() => setCount((count) => count + 1)}> count is {count} </button>\n+        <p>\n+          Edit <code>src/App.jsx</code> and save to test HMR\n+        </p>\n+      </div>\n+      <p className=\"read-the-docs\">\n+        Click on the Vite and React logos to learn more\n+      </p>\n+    </>\n+  )\n+}\n+\n+export default App\n"
+                },
+                {
+                    "date": 1699332389236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         <a href=\"https://react.dev\" target=\"_blank\">\n           <img src={reactLogo} className=\"logo react\" alt=\"React logo\" />\n         </a>\n       </div>\n-      <h1>Vite + React</h1>\n+      {/* <h1>Vite + React</h1> */}\n       <div className=\"card\">\n         Count: <button onClick={() => setCount((count) => count + 1)}> count is {count} </button>\n         <p>\n           Edit <code>src/App.jsx</code> and save to test HMR\n"
+                },
+                {
+                    "date": 1699332397508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n         </a>\n       </div>\n       {/* <h1>Vite + React</h1> */}\n       <div className=\"card\">\n-        Count: <button onClick={() => setCount((count) => count + 1)}> count is {count} </button>\n+        Count: <button onClick={() => setCount((count) => count + 1)}>{count} </button>\n         <p>\n           Edit <code>src/App.jsx</code> and save to test HMR\n         </p>\n       </div>\n"
+                },
+                {
+                    "date": 1699332406924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,15 +18,15 @@\n       </div>\n       {/* <h1>Vite + React</h1> */}\n       <div className=\"card\">\n         Count: <button onClick={() => setCount((count) => count + 1)}> {count} </button>\n-        <p>\n+        {/* <p>\n           Edit <code>src/App.jsx</code> and save to test HMR\n-        </p>\n+        </p> */}\n       </div>\n-      <p className=\"read-the-docs\">\n+      {/* <p className=\"read-the-docs\">\n         Click on the Vite and React logos to learn more\n-      </p>\n+      </p> */}\n     </>\n   )\n }\n \n"
+                },
+                {
+                    "date": 1699332449292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,16 @@\n   const [count, setCount] = useState(0)\n \n   return (\n     <>\n-      <div>\n-        <a href=\"https://vitejs.dev\" target=\"_blank\">\n+      {/* <div>\n+        {/* <a href=\"https://vitejs.dev\" target=\"_blank\">\n           <img src={viteLogo} className=\"logo\" alt=\"Vite logo\" />\n         </a>\n         <a href=\"https://react.dev\" target=\"_blank\">\n           <img src={reactLogo} className=\"logo react\" alt=\"React logo\" />\n-        </a>\n-      </div>\n+        </a> */}\n+      </div> */}\n       {/* <h1>Vite + React</h1> */}\n       <div className=\"card\">\n         Count: <button onClick={() => setCount((count) => count + 1)}> {count} </button>\n         {/* <p>\n"
+                }
+            ],
+            "date": 1699331938333,
+            "name": "Commit-0",
+            "content": "import { useState } from 'react'\nimport reactLogo from './assets/react.svg'\nimport viteLogo from '/vite.svg'\nimport './App.css'\n\nfunction App() {\n  const [count, setCount] = useState(0)\n\n  return (\n    <>\n      {/* <div>\n        <a href=\"https://vitejs.dev\" target=\"_blank\">\n          <img src={viteLogo} className=\"logo\" alt=\"Vite logo\" />\n        </a>\n        <a href=\"https://react.dev\" target=\"_blank\">\n          <img src={reactLogo} className=\"logo react\" alt=\"React logo\" />\n        </a>\n      </div> */}\n      {/* <h1>Vite + React</h1> */}\n      <div className=\"card\">\n        Count: <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>\n        <p>\n          Edit <code>src/App.jsx</code> and save to test HMR\n        </p>\n      </div>\n      <p className=\"read-the-docs\">\n        Click on the Vite and React logos to learn more\n      </p>\n    </>\n  )\n}\n\nexport default App\n"
+        }
+    ]
+}
